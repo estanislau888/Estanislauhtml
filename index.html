@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>VOCÊ SÁBIA?</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+header {
+    background-color: #0a1a2f;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* MENU */
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #123b6b;
+}
+
+.nav button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background-color: #123b6b;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.nav button:hover {
+    background-color: #0a2b4f;
+}
+
+.container {
+    padding: 15px;
+}
+
+.card {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px;
+    color: #123b6b;
+}
+
+.card p {
+    margin: 10px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* FOOTER */
+
+footer {
+    background-color: #0a1a2f;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.footer-grid div {
+    color: lightblue;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+VOCÊ SÁBIA?
+</header>
+
+<div class="nav">
+
+<button onclick="mostrar('futebol')">Futebol</button>
+<button onclick="mostrar('ciencia')">Ciência</button>
+<button onclick="mostrar('desenho')">Desenho</button>
+<button onclick="mostrar('jogos')">Jogos</button>
+<button onclick="mostrar('basquetebol')">Basquetebol</button>
+
+</div>
+
+<div class="container">
+
+<!-- FUTEBOL -->
+
+<div id="futebol">
+
+<div class="card">
+<img src="ronaldo.jpg">
+<h3>Cristiano Ronaldo</h3>
+<p>Um dos maiores jogadores de futebol da história.</p>
+</div>
+
+<div class="card">
+<img src="messi.webp">
+<h3>Lionel Messi</h3>
+<p>Conhecido pela sua técnica e visão de jogo incrível.</p>
+</div>
+
+<div class="card">
+<img src="pele.webp">
+<h3>Pelé</h3>
+<p>Lenda do futebol mundial com três Copas do Mundo.</p>
+</div>
+
+</div>
+
+<!-- CIÊNCIA -->
+
+<div id="ciencia" class="hidden">
+
+<div class="card">
+<img src="buraco.jpeg">
+<h3>Buracos Negros</h3>
+<p>Regiões do espaço com gravidade extremamente forte.</p>
+</div>
+
+<div class="card">
+<img src="cerebro.webp">
+<h3>Cérebro Humano</h3>
+<p>O órgão mais complexo do corpo humano.</p>
+</div>
+
+</div>
+
+<!-- DESENHO -->
+
+<div id="desenho" class="hidden">
+
+<div class="card">
+<img src="ben.jpg">
+<h3>ben tenison</h3>
+<p>desenho mais famoso de 2012 a 2021.</p>
+</div>
+
+<div class="card">
+<img src="clarence.jpg">
+<h3>clarence</h3>
+<p>Desenho animado muito popular mundialmente.</p>
+</div>
+
+</div>
+
+<!-- JOGOS -->
+
+<div id="jogos" class="hidden">
+
+<div class="card">
+<img src="mine.jpg">
+<h3>Minecraft</h3>
+<p>Jogo de construção e sobrevivência em mundo aberto.</p>
+</div>
+
+<div class="card">
+<img src="red dead.jpg">
+<h3>Red dead redenption</h3>
+<p>Um dos jogos mais populares de ação e velho hoeste.</p>
+</div>
+
+</div>
+
+<!-- BASQUETEBOL -->
+
+<div id="basquetebol" class="hidden">
+
+<div class="card">
+<img src="principal.webp">
+<h3>Michael Jordan</h3>
+<p>Considerado o maior jogador de basquetebol de todos os tempos.</p>
+</div>
+
+<div class="card">
+<img src="lebron.webp">
+<h3>LeBron James</h3>
+<p>Uma das maiores estrelas da NBA atual.</p>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<h3>Outras Curiosidades</h3>
+
+<div class="footer-grid">
+
+<div>Espaço</div>
+<div>História</div>
+<div>Tecnologia</div>
+<div>Corpo Humano</div>
+<div>Natureza</div>
+<div>Invenções</div>
+
+</div>
+
+</footer>
+
+<script>
+
+function mostrar(secao) {
+
+let secoes = [
+'futebol',
+'ciencia',
+'desenho',
+'jogos',
+'basquetebol'
+];
+
+secoes.forEach(id => {
+document.getElementById(id)
+.classList.add("hidden");
+});
+
+document.getElementById(secao)
+.classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
